@@ -1,8 +1,4 @@
 defmodule CatppuccinTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest Catppuccin
-
-  test "greets the world" do
-    assert Catppuccin.hello() == :world
-  end
 end

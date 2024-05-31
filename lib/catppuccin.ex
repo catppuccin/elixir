@@ -36,60 +36,122 @@ defmodule Catppuccin do
 
   @doc """
   Returns the name of the flavor.
+
+  ## Examples
+
+      iex> Catppuccin.flavor_name(Catppuccin.latte())
+      "Latte"
+
   """
   @spec flavor_name(Flavor.t()) :: String.t()
   def flavor_name(%Flavor{name: name}), do: name
 
   @doc """
   Returns the emoji of the flavor.
+
+  ## Examples
+
+      iex> Catppuccin.emoji(Catppuccin.latte())
+      "🌻"
+
   """
   @spec emoji(Flavor.t()) :: String.t()
   def emoji(%Flavor{emoji: emoji}), do: emoji
 
   @doc """
   Returns the order of the flavor.
+
+  ## Examples
+
+      iex> Catppuccin.flavor_order(Catppuccin.latte())
+      0
+
   """
   @spec flavor_order(Flavor.t()) :: integer()
   def flavor_order(%Flavor{order: order}), do: order
 
   @doc """
   Returns if the flavor is dark.
+
+  ## Examples
+
+      iex> Catppuccin.dark(Catppuccin.latte())
+      false
+
+      iex> Catppuccin.dark(Catppuccin.frappe())
+      true
   """
   @spec dark(Flavor.t()) :: boolean()
   def dark(%Flavor{dark: dark}), do: dark
 
   @doc """
   Returns the name of the color.
+
+  ## Examples
+
+      iex> Catppuccin.color_name(Catppuccin.latte().colors[:rosewater])
+      "Rosewater"
+
   """
   @spec color_name(Color.t()) :: String.t()
   def color_name(%Color{name: name}), do: name
 
   @doc """
   Return the order of the color.
+
+  ## Examples
+
+      iex> Catppuccin.color_order(Catppuccin.latte().colors[:rosewater])
+      0
+
   """
   @spec color_order(Color.t()) :: integer()
   def color_order(%Color{order: order}), do: order
 
   @doc """
   Returns the hex code of the color.
+
+  ## Examples
+
+      iex> Catppuccin.to_hex(Catppuccin.latte().colors[:rosewater])
+      "#dc8a78"
+
   """
   @spec to_hex(Color.t()) :: String.t()
   def to_hex(%Color{hex: hex}), do: hex
 
   @doc """
   Returns the RGB values of the color.
+
+  ## Examples
+
+      iex> Catppuccin.to_rgb(Catppuccin.latte().colors[:rosewater])
+      {220, 138, 120}
+
   """
   @spec to_rgb(Color.t()) :: {integer(), integer(), integer()}
   def to_rgb(%Color{rgb: rgb}), do: rgb
 
   @doc """
   Returns the hsl values of the color.
+
+  ## Example
+
+      iex> Catppuccin.to_hsl(Catppuccin.latte().colors[:rosewater])
+      {10.799999999999995, 0.5882352941176472, 0.6666666666666667}
+
   """
   @spec to_hsl(COlor.t()) :: {integer(), integer(), integer()}
   def to_hsl(%Color{hsl: hsl}), do: hsl
 
   @doc """
   Returns if the color is an accent color.
+
+  ## Examples
+
+      iex> Catppuccin.accent(Catppuccin.latte().colors[:rosewater])
+      true
+
   """
   @spec accent(Color.t()) :: boolean()
   def accent(%Color{accent: accent}), do: accent
@@ -101,6 +163,19 @@ defmodule Catppuccin do
 
   @doc """
   Retuns the color data for the rosewater color for a given flavor.
+
+  ## Examples
+
+      iex> Catppuccin.rosewater(Catppuccin.latte())
+      %Catppuccin.Color{
+          name: "Rosewater",
+          order: 0,
+          hex: "#dc8a78",
+          rgb: {220, 138, 120},
+          hsl: {10.799999999999995, 0.5882352941176472, 0.6666666666666667},
+          accent: true
+      }
+
   """
   @spec rosewater(Flavor.t()) :: Color.t() | nil
   def rosewater(flavor), do: color_accessor(:rosewater, flavor)
