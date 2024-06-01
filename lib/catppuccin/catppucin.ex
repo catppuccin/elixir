@@ -2,36 +2,13 @@ defmodule Catppuccin do
   @moduledoc """
   ⚗️ Soothing pastel theme for Elixir.
   """
+  alias Catppuccin.{Color, Flavor}
+  alias Catppuccin.FlavorAgent
 
-  @flavors [:latte, :frappe, :macchiato]
+  use Application
 
-  defmodule Flavor do
-    @typedoc """
-    Datastructure representing a flavor.
-    """
-    @type t :: %__MODULE__{
-            name: String.t(),
-            emoji: String.t(),
-            order: integer(),
-            dark: boolean(),
-            colors: %{atom() => Color.t()}
-          }
-    defstruct [:name, :emoji, :order, :dark, :colors]
-  end
-
-  defmodule Color do
-    @typedoc """
-    Datastructure representing a color i hex, rgb, and hsl.
-    """
-    @type t :: %__MODULE__{
-            name: String.t(),
-            order: integer(),
-            hex: String.t(),
-            rgb: {integer(), integer(), integer()},
-            hsl: {integer(), integer(), integer()},
-            accent: boolean()
-          }
-    defstruct [:name, :order, :hex, :rgb, :hsl, :accent]
+  def start(_type, _args) do
+    FlavorAgent.start_link()
   end
 
   @doc """
@@ -335,7 +312,7 @@ defmodule Catppuccin do
   """
   @spec latte() :: Flavor.t()
   def latte do
-    flavor(:latte)
+    FlavorAgent.flavor(:latte)
   end
 
   @doc """
@@ -343,7 +320,7 @@ defmodule Catppuccin do
   """
   @spec frappe() :: Flavor.t()
   def frappe do
-    flavor(:frappe)
+    FlavorAgent.flavor(:frappe)
   end
 
   @doc """
@@ -351,48 +328,6 @@ defmodule Catppuccin do
   """
   @spec macchiato() :: Flavor.t()
   def macchiato do
-    flavor(:macchiato)
-  end
-
-  @spec flavor(atom()) :: Flavor.t() | nil
-  defp flavor(name) when name in @flavors do
-    {:ok, data} = File.read("lib/palette.json")
-    {:ok, json} = Jason.decode(data)
-
-    json
-    |> Enum.into(%{}, &into_flavor/1)
-    |> Map.get(name)
-  end
-
-  @spec into_flavor({String.t(), map()}) :: {atom(), Flavor.t()}
-  defp into_flavor({flavor_name, flavor_data}) do
-    {
-      String.to_atom(flavor_name),
-      %Flavor{
-        name: flavor_data["name"],
-        emoji: flavor_data["emoji"],
-        order: flavor_data["order"],
-        dark: flavor_data["dark"],
-        colors:
-          flavor_data["colors"]
-          |> Enum.map(&map_to_color/1)
-          |> Enum.into(%{})
-      }
-    }
-  end
-
-  @spec map_to_color({String.t(), map()}) :: {atom(), Color.t()}
-  defp map_to_color({color_name, color_data}) do
-    {
-      String.to_atom(color_name),
-      %Color{
-        name: color_data["name"],
-        order: color_data["order"],
-        hex: color_data["hex"],
-        rgb: {color_data["rgb"]["r"], color_data["rgb"]["g"], color_data["rgb"]["b"]},
-        hsl: {color_data["hsl"]["h"], color_data["hsl"]["s"], color_data["hsl"]["l"]},
-        accent: color_data["accent"]
-      }
-    }
+    FlavorAgent.flavor(:macchiato)
   end
 end
