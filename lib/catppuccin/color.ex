@@ -1,4 +1,8 @@
 defmodule Catppuccin.Color do
+  @moduledoc """
+  Module for handling color data.
+  """
+
   alias Catppuccin.Flavor
 
   @typedoc """

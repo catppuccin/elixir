@@ -1,4 +1,8 @@
 defmodule Catppuccin.Flavor do
+  @moduledoc """
+  Module to retrieve information about flavors.
+  """
+
   @typedoc """
   Datastructure representing a flavor.
   """
