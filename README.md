@@ -824,7 +824,7 @@ Catppuccin.latte
 ### Get flavor emoji
 ```elixir
 Catppuccin.latte
-|> Catpuccin.Flavor.emoji
+|> Catppuccin.Flavor.emoji
 ```
 
 <!-- this section is optional -->
