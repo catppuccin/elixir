@@ -100,11 +100,11 @@ defmodule Catppuccin.Color do
   end
 
   for color_name <- @color_names do
-    doc = """
+    Module.register_attribute(__MODULE__, :doc, accumulate: true)
+
+    @doc """
     Returns the `#{color_name}` color for the given `flavor`.
     """
-    Module.register_attribute(__MODULE__, :doc, accumulate: true)
-    @doc doc
 
     def unquote(:"#{color_name}")(flavor), do: color_accessor(unquote(:"#{color_name}"), flavor)
   end
