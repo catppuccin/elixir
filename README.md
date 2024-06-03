@@ -799,7 +799,7 @@
 ```elixir
 def deps do
   [
-    {:catppuccin, github: "MikaelFangel/elixir", tag: "v0.1.1"}
+    {:catppuccin, github: "MikaelFangel/elixir", tag: "v0.1.2"}
   ]
 end
 ```
