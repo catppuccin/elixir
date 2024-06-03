@@ -795,15 +795,15 @@
 
 ## Usage
 
-1. Inlcude the depencency in your mix project.
+1. Include the dependency in your mix project.
 ```elixir
 def deps do
   [
-    {:catppuccin, github: "MikaelFangel/elixir", tag: "v0.1.0"}
+    {:catppuccin, github: "MikaelFangel/elixir", tag: "v0.1.1"}
   ]
 end
 ```
-2. Enjoy the access to the beautifull catppuccin palette.
+2. Enjoy the beautiful Catppuccin palette.
 
 ## Examples 
 
@@ -824,7 +824,7 @@ Catppuccin.latte
 ### Get flavor emoji
 ```elixir
 Catppuccin.latte
-|> Catpuccin.Flavor.emoji
+|> Catppuccin.Flavor.emoji
 ```
 
 <!-- this section is optional -->

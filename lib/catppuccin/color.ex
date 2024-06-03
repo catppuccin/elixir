@@ -1,8 +1,12 @@
 defmodule Catppuccin.Color do
+  @moduledoc """
+  Module for handling color data.
+  """
+
   alias Catppuccin.Flavor
 
   @typedoc """
-  Datastructure representing a color i hex, rgb, and hsl.
+  Data structure representing a color i hex, rgb, and hsl.
   """
   @type t :: %__MODULE__{
           name: String.t(),
@@ -94,7 +98,7 @@ defmodule Catppuccin.Color do
   end
 
   @doc """
-  Retuns the color data for the rosewater color for a given flavor.
+  Returns the color data for the rosewater color for a given flavor.
 
   ## Examples
 

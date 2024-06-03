@@ -1,6 +1,10 @@
 defmodule Catppuccin.Flavor do
+  @moduledoc """
+  Module to retrieve information about flavors.
+  """
+
   @typedoc """
-  Datastructure representing a flavor.
+  Data structure representing a flavor.
   """
   @type t :: %__MODULE__{
           name: String.t(),
