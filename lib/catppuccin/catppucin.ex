@@ -33,7 +33,7 @@ defmodule Catppuccin do
   end
 
   @doc """
-  Returns the flavor data for the cappuccino flavor.
+  Returns the flavor data for the mocha flavor.
   """
   @spec mocha() :: Flavor.t()
   def mocha do
