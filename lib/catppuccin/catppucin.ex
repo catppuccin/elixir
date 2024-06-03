@@ -6,7 +6,7 @@ defmodule Catppuccin do
   alias Catppuccin.FlavorETS
 
   @doc """
-  Retuns the flavor data for the latte flavor.
+  Returns the flavor data for the latte flavor.
   """
   @spec latte() :: Flavor.t()
   def latte do

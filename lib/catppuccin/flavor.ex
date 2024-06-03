@@ -4,7 +4,7 @@ defmodule Catppuccin.Flavor do
   """
 
   @typedoc """
-  Datastructure representing a flavor.
+  Data structure representing a flavor.
   """
   @type t :: %__MODULE__{
           name: String.t(),
