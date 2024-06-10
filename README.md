@@ -6,9 +6,9 @@
 </h3>
 
 <p align="center">
-	<a href="https://github.com/mikaelfangel/elixir/stargazers"><img src="https://img.shields.io/github/stars/mikaelfangel/elixir?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/mikaelfangel/elixir/issues"><img src="https://img.shields.io/github/issues/mikaelfangel/elixir?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/mikaelfangel/elixir/contributors"><img src="https://img.shields.io/github/contributors/mikaelfangel/elixir?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/elixir/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/elixir?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/elixir/issues"><img src="https://img.shields.io/github/issues/catppuccin/elixir?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+	<a href="https://github.com/catppuccin/elixir/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/elixir?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 ## Usage
@@ -17,7 +17,7 @@
 ```elixir
 def deps do
   [
-    {:catppuccin, github: "MikaelFangel/elixir", tag: "v0.1.2"}
+    {:catppuccin, github: "catppuccin/elixir", tag: "v0.1.2"}
   ]
 end
 ```
@@ -49,7 +49,7 @@ Catppuccin.latte
 ## 🙋 FAQ
 
 -	Q: **_"Where can I find the doc?"_**\
-	A: [API Reference](https://mikaelfangel.github.io/elixir/api-reference.html)
+	A: [API Reference](https://catppuccin.github.io/elixir/api-reference.html)
 
 ## 💝 Thanks to
 
