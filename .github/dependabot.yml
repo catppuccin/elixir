@@ -1,6 +1,0 @@
-version: 2
-updates:
-  - package-ecosystem: "mix" # See documentation for possible values
-    directory: "/"
-    schedule:
-      interval: "weekly"
