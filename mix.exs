@@ -25,7 +25,7 @@ defmodule Catppuccin.MixProject do
   defp deps do
     [
       {:jason, "~> 1.4"},
-      {:ex_doc, "~> 0.35", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.36", only: :dev, runtime: false},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
