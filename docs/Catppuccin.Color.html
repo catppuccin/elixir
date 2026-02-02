@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.40.1">
+    <meta name="project" content="catppuccin v0.1.2">
+
+
+    <title>Catppuccin.Color — catppuccin v0.1.2</title>
+
+    <link rel="stylesheet" href="dist/html-elixir-YJO4MOOW.css" />
+
+    <script defer src="dist/sidebar_items-B86253E6.js"></script>
+    <script defer src="docs_config.js"></script>
+    <script defer src="dist/html-YU4BZFVS.js"></script>
+
+  </head>
+  <body>
+    <script>(()=>{var t="ex_doc:settings",e="dark";var o="dark",s="light";var E="sidebar_state",n="closed";var r="sidebar_width";var a="sidebar-open";var i=new URLSearchParams(window.location.search),S=i.get("theme")||JSON.parse(localStorage.getItem(t)||"{}").theme;(S===o||S!==s&&window.matchMedia("(prefers-color-scheme: dark)").matches)&&document.body.classList.add(e);var d=sessionStorage.getItem(E),A=d!==n&&!window.matchMedia(`screen and (max-width: ${768}px)`).matches;document.body.classList.toggle(a,A);var c=sessionStorage.getItem(r);c&&document.body.style.setProperty("--sidebarWidth",`${c}px`);var p=/(Macintosh|iPhone|iPad|iPod)/.test(window.navigator.userAgent);document.documentElement.classList.toggle("apple-os",p);})();
+</script>
+
+<div class="body-wrapper">
+
+<button id="sidebar-menu" class="sidebar-button sidebar-toggle" aria-label="toggle sidebar" aria-controls="sidebar">
+  <i class="ri-menu-line ri-lg" title="Collapse/expand sidebar"></i>
+</button>
+
+<nav id="sidebar" class="sidebar">
+
+  <div class="sidebar-header">
+    <div class="sidebar-projectInfo">
+
+      <div>
+        <a href="api-reference.html" class="sidebar-projectName" translate="no">
+catppuccin
+        </a>
+        <div class="sidebar-projectVersion" translate="no">
+          v0.1.2
+        </div>
+      </div>
+    </div>
+    <ul id="sidebar-list-nav" class="sidebar-list-nav" role="tablist" data-extras="Pages"></ul>
+  </div>
+</nav>
+
+<output role="status" id="toast"></output>
+
+<main class="content page-module" id="main" data-type="modules">
+  <div id="content" class="content-inner">
+    <div class="top-search">
+      <div class="search-settings">
+        <form class="search-bar" action="search.html">
+          <label class="search-label">
+            <span class="sr-only">Search documentation of catppuccin</span>
+            <div class="search-input-wrapper">
+              <input name="q" type="text" class="search-input" placeholder="Press / to search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+              <button type="button" tabindex="-1" class="search-close-button" aria-hidden="true">
+                <i class="ri-close-line ri-lg" title="Cancel search"></i>
+              </button>
+            </div>
+          </label>
+        </form>
+        <div class="autocomplete">
+        </div>
+        <div class="engine-selector" data-multiple="false">
+          <button type="button" class="engine-button" aria-label="Select search engine" aria-haspopup="true" aria-expanded="false">
+            <i class="ri-search-2-line" aria-hidden="true"></i>
+            <span class="engine-name">Default</span>
+            <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+          </button>
+          <div class="engine-dropdown" hidden role="menu">
+
+              <button type="button"
+                      class="engine-option"
+                      data-engine-url="search.html?q="
+                      role="menuitemradio"
+                      aria-checked="true">
+                <span class="name">Default</span>
+                <span class="help">In-browser search</span>
+              </button>
+
+          </div>
+        </div>
+        <button class="icon-settings display-settings">
+          <i class="ri-settings-3-line"></i>
+          <span class="sr-only">Settings</span>
+        </button>
+      </div>
+    </div>
+
+<div id="top-content">
+  <div class="heading-with-actions top-heading">
+    <h1>
+      <span translate="no">Catppuccin.<wbr>Color</span> 
+      <small class="app-vsn" translate="no">(catppuccin v0.1.2)</small>
+
+    </h1>
+
+<a href="Catppuccin.Color.md" title="Copy Markdown (hold Ctrl/Cmd and click it to open as Markdown)" class="copy-markdown icon-action" rel="help">
+  <i class="ri-markdown-line" aria-hidden="true"></i>
+  <span class="sr-only">Copy Markdown</span>
+</a>
+
+
+
+  </div>
+
+
+    <section id="moduledoc">
+<p>Module for handling color data.</p>
+    </section>
+
+</div>
+
+  <section id="summary" class="details-list">
+    <h2 class="section-heading">
+      <a class="hover-link" href="#summary">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Summary</span>
+    </h2>
+<div class="summary-types summary">
+  <h3>
+    <a href="#types">Types</a>
+  </h3>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#t:t/0" data-no-tooltip="" translate="no">t()</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Data structure representing a color i hex, rgb, and hsl.</p></div>
+
+    </div>
+
+</div>
+<div class="summary-functions summary">
+  <h3>
+    <a href="#functions">Functions</a>
+  </h3>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#accent/1" data-no-tooltip="" translate="no">accent(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns if the color is an accent color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#base/1" data-no-tooltip="" translate="no">base(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">base</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#blue/1" data-no-tooltip="" translate="no">blue(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">blue</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#crust/1" data-no-tooltip="" translate="no">crust(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">crust</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#flamingo/1" data-no-tooltip="" translate="no">flamingo(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">flamingo</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#green/1" data-no-tooltip="" translate="no">green(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">green</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#lavender/1" data-no-tooltip="" translate="no">lavender(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">lavender</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#mantle/1" data-no-tooltip="" translate="no">mantle(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">mantle</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#maroon/1" data-no-tooltip="" translate="no">maroon(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">maroon</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#mauve/1" data-no-tooltip="" translate="no">mauve(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">mauve</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#name/1" data-no-tooltip="" translate="no">name(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the name of the color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#order/1" data-no-tooltip="" translate="no">order(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Return the order of the color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#overlay0/1" data-no-tooltip="" translate="no">overlay0(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">overlay0</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#overlay1/1" data-no-tooltip="" translate="no">overlay1(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">overlay1</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#overlay2/1" data-no-tooltip="" translate="no">overlay2(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">overlay2</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#peach/1" data-no-tooltip="" translate="no">peach(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">peach</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#pink/1" data-no-tooltip="" translate="no">pink(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">pink</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#red/1" data-no-tooltip="" translate="no">red(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">red</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#rosewater/1" data-no-tooltip="" translate="no">rosewater(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">rosewater</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#sapphire/1" data-no-tooltip="" translate="no">sapphire(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">sapphire</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#sky/1" data-no-tooltip="" translate="no">sky(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">sky</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#subtext0/1" data-no-tooltip="" translate="no">subtext0(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">subtext0</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#subtext1/1" data-no-tooltip="" translate="no">subtext1(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">subtext1</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#surface0/1" data-no-tooltip="" translate="no">surface0(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">surface0</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#surface1/1" data-no-tooltip="" translate="no">surface1(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">surface1</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#surface2/1" data-no-tooltip="" translate="no">surface2(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">surface2</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#teal/1" data-no-tooltip="" translate="no">teal(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">teal</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#text/1" data-no-tooltip="" translate="no">text(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">text</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#to_hex/1" data-no-tooltip="" translate="no">to_hex(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the hex code of the color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#to_hsl/1" data-no-tooltip="" translate="no">to_hsl(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the hsl values of the color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#to_rgb/1" data-no-tooltip="" translate="no">to_rgb(color)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the RGB values of the color.</p></div>
+
+    </div>
+
+    <div class="summary-row">
+      <div class="summary-signature">
+        <a href="#yellow/1" data-no-tooltip="" translate="no">yellow(flavor)</a>
+
+      </div>
+
+        <div class="summary-synopsis"><p>Returns the <code class="inline">yellow</code> color for the given <code class="inline">flavor</code>.</p></div>
+
+    </div>
+
+</div>
+
+  </section>
+
+
+  <section id="types" class="details-list">
+    <h2 class="section-heading">
+      <a class="hover-link" href="#types">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Types</span>
+    </h2>
+
+    <div class="types-list">
+<section class="detail" id="t:t/0">
+
+  <div class="detail-header">
+    <a href="#t:t/0" class="detail-link" data-no-tooltip="" aria-label="Link to this type">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">t()</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@type</span> t() :: %Catppuccin.Color{
+  accent: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>(),
+  hex: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  hsl: {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()},
+  name: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>(),
+  order: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(),
+  rgb: {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()}
+}</pre>
+
+      </div>
+
+<p>Data structure representing a color i hex, rgb, and hsl.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+  <section id="functions" class="details-list">
+    <h2 class="section-heading">
+      <a class="hover-link" href="#functions">
+        <i class="ri-link-m" aria-hidden="true"></i>
+      </a>
+      <span class="text">Functions</span>
+    </h2>
+
+    <div class="functions-list">
+<section class="detail" id="accent/1">
+
+  <div class="detail-header">
+    <a href="#accent/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">accent(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> accent(<a href="#t:t/0">t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#built-in-types">boolean</a>()</pre>
+
+      </div>
+
+<p>Returns if the color is an accent color.</p><h2 id="accent/1-examples" class="section-heading"><a href="#accent/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">accent</span><span class="w">
+</span><span class="no">true</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="base/1">
+
+  <div class="detail-header">
+    <a href="#base/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">base(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">base</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="blue/1">
+
+  <div class="detail-header">
+    <a href="#blue/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">blue(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">blue</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="crust/1">
+
+  <div class="detail-header">
+    <a href="#crust/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">crust(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">crust</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="flamingo/1">
+
+  <div class="detail-header">
+    <a href="#flamingo/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">flamingo(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">flamingo</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="green/1">
+
+  <div class="detail-header">
+    <a href="#green/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">green(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">green</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="lavender/1">
+
+  <div class="detail-header">
+    <a href="#lavender/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">lavender(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">lavender</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="mantle/1">
+
+  <div class="detail-header">
+    <a href="#mantle/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">mantle(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">mantle</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="maroon/1">
+
+  <div class="detail-header">
+    <a href="#maroon/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">maroon(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">maroon</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="mauve/1">
+
+  <div class="detail-header">
+    <a href="#mauve/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">mauve(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">mauve</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="name/1">
+
+  <div class="detail-header">
+    <a href="#name/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">name(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> name(<a href="#t:t/0">t</a>()) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>Returns the name of the color.</p><h2 id="name/1-examples" class="section-heading"><a href="#name/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;Rosewater&quot;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="order/1">
+
+  <div class="detail-header">
+    <a href="#order/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">order(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> order(<a href="#t:t/0">t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()</pre>
+
+      </div>
+
+<p>Return the order of the color.</p><h2 id="order/1-examples" class="section-heading"><a href="#order/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">order</span><span class="w">
+</span><span class="mi">0</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="overlay0/1">
+
+  <div class="detail-header">
+    <a href="#overlay0/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">overlay0(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">overlay0</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="overlay1/1">
+
+  <div class="detail-header">
+    <a href="#overlay1/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">overlay1(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">overlay1</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="overlay2/1">
+
+  <div class="detail-header">
+    <a href="#overlay2/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">overlay2(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">overlay2</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="peach/1">
+
+  <div class="detail-header">
+    <a href="#peach/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">peach(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">peach</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="pink/1">
+
+  <div class="detail-header">
+    <a href="#pink/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">pink(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">pink</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="red/1">
+
+  <div class="detail-header">
+    <a href="#red/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">red(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">red</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="rosewater/1">
+
+  <div class="detail-header">
+    <a href="#rosewater/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">rosewater(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">rosewater</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="sapphire/1">
+
+  <div class="detail-header">
+    <a href="#sapphire/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">sapphire(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">sapphire</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="sky/1">
+
+  <div class="detail-header">
+    <a href="#sky/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">sky(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">sky</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="subtext0/1">
+
+  <div class="detail-header">
+    <a href="#subtext0/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">subtext0(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">subtext0</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="subtext1/1">
+
+  <div class="detail-header">
+    <a href="#subtext1/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">subtext1(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">subtext1</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="surface0/1">
+
+  <div class="detail-header">
+    <a href="#surface0/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">surface0(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">surface0</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="surface1/1">
+
+  <div class="detail-header">
+    <a href="#surface1/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">surface1(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">surface1</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="surface2/1">
+
+  <div class="detail-header">
+    <a href="#surface2/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">surface2(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">surface2</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="teal/1">
+
+  <div class="detail-header">
+    <a href="#teal/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">teal(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">teal</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="text/1">
+
+  <div class="detail-header">
+    <a href="#text/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">text(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">text</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+<section class="detail" id="to_hex/1">
+
+  <div class="detail-header">
+    <a href="#to_hex/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">to_hex(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> to_hex(<a href="#t:t/0">t</a>()) :: <a href="https://hexdocs.pm/elixir/String.html#t:t/0">String.t</a>()</pre>
+
+      </div>
+
+<p>Returns the hex code of the color.</p><h2 id="to_hex/1-examples" class="section-heading"><a href="#to_hex/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">to_hex</span><span class="w">
+</span><span class="s">&quot;#f2d5cf&quot;</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="to_hsl/1">
+
+  <div class="detail-header">
+    <a href="#to_hsl/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">to_hsl(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> to_hsl(<a href="#t:t/0">t</a>()) :: {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()}</pre>
+
+      </div>
+
+<p>Returns the hsl values of the color.</p><h2 id="to_hsl/1-example" class="section-heading"><a href="#to_hsl/1-example" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Example</span></h2><pre><code class="makeup elixir" translate="no"><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">to_hsl</span><span class="w">
+</span><span class="p" data-group-id="0893871052-1">{</span><span class="mf">10.2857142857143</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5737704918032784</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8803921568627451</span><span class="p" data-group-id="0893871052-1">}</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="to_rgb/1">
+
+  <div class="detail-header">
+    <a href="#to_rgb/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">to_rgb(color)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+      <div class="specs">
+
+          <pre translate="no"><span class="attribute">@spec</span> to_rgb(<a href="#t:t/0">t</a>()) :: {<a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>(), <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">integer</a>()}</pre>
+
+      </div>
+
+<p>Returns the RGB values of the color.</p><h2 id="to_rgb/1-examples" class="section-heading"><a href="#to_rgb/1-examples" class="hover-link"><i class="ri-link-m" aria-hidden="true"></i></a><span class="text">Examples</span></h2><pre><code class="makeup elixir" translate="no"><span class="w"> </span><span class="gp unselectable">iex&gt; </span><span class="nc">Catppuccin</span><span class="o">.</span><span class="n">frappe</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">rosewater</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Catppuccin.Color</span><span class="o">.</span><span class="n">to_rgb</span><span class="w">
+ </span><span class="p" data-group-id="9990422504-1">{</span><span class="mi">242</span><span class="p">,</span><span class="w"> </span><span class="mi">213</span><span class="p">,</span><span class="w"> </span><span class="mi">207</span><span class="p" data-group-id="9990422504-1">}</span></code></pre>
+  </section>
+</section>
+<section class="detail" id="yellow/1">
+
+  <div class="detail-header">
+    <a href="#yellow/1" class="detail-link" data-no-tooltip="" aria-label="Link to this function">
+      <i class="ri-link-m" aria-hidden="true"></i>
+    </a>
+    <div class="heading-with-actions">
+      <h1 class="signature" translate="no">yellow(flavor)</h1>
+
+
+    </div>
+  </div>
+
+  <section class="docstring">
+
+<p>Returns the <code class="inline">yellow</code> color for the given <code class="inline">flavor</code>.</p>
+  </section>
+</section>
+
+    </div>
+  </section>
+
+    <footer class="footer">
+
+        <p>
+
+          <span class="line">
+            <button class="a-main footer-button display-quick-switch" title="Go to package docs">
+              Go to package docs
+            </button>
+
+              <a href="llms.txt" target="_blank">
+                View llms.txt
+              </a>
+
+
+              <a href="catppuccin.epub">
+                Download ePub version
+              </a>
+
+          </span>
+        </p>
+
+        <p class="built-using">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener" translate="no">ExDoc</a> (v0.40.1) for the
+
+            <a href="https://elixir-lang.org" title="Elixir" target="_blank" translate="no">Elixir programming language</a>
+
+        </p>
+
+
+    </footer>
+  </div>
+</main>
+</div>
+
+  </body>
+</html>
